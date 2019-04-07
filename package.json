@@ -1,0 +1,36 @@
+{
+  "name": "my-rollup",
+  "version": "1.0.0",
+  "description": "my rollup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:amd": "rollup index.js -f amd -o ./dist/dist.amd.js",
+    "build:cjs": "rollup index.js -f cjs -o ./dist/dist.cjs.js",
+    "build:es": "rollup index.js -f es -o ./dist/dist.es.js",
+    "build:iife": "rollup index.js -f iife -o ./dist/dist.iife.js",
+    "build:umd": "rollup index.js -f umd -o ./dist/dist.umd.js",
+    "build:all": "npm run build:amd && npm run build:cjs && npm run build:es && npm run build:iife && npm run build:umd",
+    "dev": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "keywords": [
+    "rollup",
+    "js"
+  ],
+  "author": "zty",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "jquery": "^3.3.1",
+    "rollup": "^1.9.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-node-resolve": "^4.1.0",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.2"
+  }
+}
